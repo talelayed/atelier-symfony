@@ -25,7 +25,7 @@ class TodoController extends AbstractController
             'controller_name' => 'TodoController',
         ]);
     }
-    #[Route('/todo/add/{title}/{content}', name: 'add_todo')]
+    #[Route('/todo/add/{title?today}/{content?coding}', name: 'add_todo')]
     public function addToDo(Request $request,$title,$content):Response
     {
         $session = $request->getSession();
